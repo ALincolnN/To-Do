@@ -23,10 +23,10 @@ def insert(request):
         return redirect('/')
   
 
-def delete(request):
+def delete(request,todo_id):
 
     
-    rej= ToDo.objects.all()
+    rej= ToDo.objects.get(id=todo_id)
     rej.delete()
 
     return redirect('/')

@@ -45,7 +45,7 @@
                             
                         <li class="list-group-item">{{task.content}}
 
-                            <form action="delete" method="POST" class="float-right d-inline" name="id">
+                            <form action="{% url 'delete' task.id %}" method="POST" class="float-right d-inline">
                                 {% csrf_token %}
 
                                 <button type="submit" class="btn">
